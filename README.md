@@ -1,4 +1,5 @@
-# ChatMate 💬
+# ChatMate V.8
+By Ahmad Riko Dyansyah
 
 Aplikasi chat mirip WhatsApp dibuat dengan **Flutter (Dart)** dan **Firebase**
 (Authentication, Cloud Firestore, Storage). Mendukung:
