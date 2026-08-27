@@ -4,13 +4,6 @@ By Ahmad Riko Dyansyah
 Aplikasi chat mirip WhatsApp dibuat dengan **Flutter (Dart)** dan **Firebase**
 (Authentication, Cloud Firestore, Storage). Mendukung:
 
-- ✅ Daftar akun (email, password, nickname) — data tersimpan di database (Firestore)
-- ✅ Login hanya dengan email & password
-- ✅ Chat real-time antar pengguna terdaftar (misal: Ahmad Riko ↔ Amelia Citra)
-- ✅ Kirim pesan teks, **gambar**, dan **berkas** (PDF, DOCX, ZIP, dll — bisa diunduh & dibuka penerima)
-- ✅ Halaman **Pengaturan**: ubah/tambah foto profil, ubah nickname & info
-- ✅ Tampilan mirip WhatsApp (bubble chat, status online, centang terkirim/dibaca, dsb.)
-
 ---
 
 ## 1. Struktur Proyek
