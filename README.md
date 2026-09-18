@@ -35,53 +35,10 @@ chatmate/
 - Akun Google untuk membuat project di [Firebase Console](https://console.firebase.google.com/).
 - Node.js (untuk `firebase-tools`) — opsional tapi memudahkan.
 
----
-
-## 3. Setup Firebase (WAJIB — aplikasi tidak akan berjalan tanpa ini)
-
-Karena chat & login membutuhkan **database sungguhan** (bukan simulasi lokal),
-Anda perlu menghubungkan proyek ke Firebase milik Anda sendiri:
-
-### 3.1 Buat Project Firebase
-1. Buka https://console.firebase.google.com/ → **Add project** → beri nama (mis. `chatmate-app`).
-2. Tunggu sampai project selesai dibuat.
-
-### 3.2 Aktifkan Authentication
-1. Di sidebar, buka **Build → Authentication → Get started**.
-2. Tab **Sign-in method** → aktifkan **Email/Password**.
-
-### 3.3 Aktifkan Cloud Firestore
-1. **Build → Firestore Database → Create database**.
-2. Pilih mode **production** (aturan sudah disediakan di `firestore.rules`).
-3. Setelah database dibuat, buka tab **Rules**, salin isi file `firestore.rules`
-   dari proyek ini, tempel, lalu **Publish**.
-
-### 3.4 Aktifkan Storage
-1. **Build → Storage → Get started**.
-2. Setelah aktif, buka tab **Rules**, salin isi `storage.rules`, tempel, **Publish**.
-   (Dipakai untuk menyimpan foto profil, gambar, dan berkas chat.)
-
-### 3.5 Hubungkan Flutter App ke Firebase (FlutterFire CLI)
-Jalankan di terminal, dari folder root proyek `chatmate/`:
-
-```bash
-dart pub global activate flutterfire_cli
-flutterfire configure
-```
-
-- Pilih project Firebase yang baru dibuat.
-- Pilih platform (minimal **android**; tambahkan ios/web jika perlu).
-- Perintah ini akan **menimpa/menggantikan** file `lib/firebase_options.dart`
-  (yang saat ini masih placeholder berisi `REPLACE_ME`) dengan konfigurasi asli.
-- Untuk Android, perintah ini juga otomatis membuat `android/app/google-services.json`.
-
-> ⚠️ Jika Anda menjalankan `flutterfire configure` tanpa CLI (manual), unduh
-> `google-services.json` dari **Project settings → General → Your apps → Android app**
-> lalu letakkan di `android/app/google-services.json`.
 
 ---
 
-## 4. Install Dependencies & Jalankan
+## 5. Install Dependencies & Jalankan
 
 ```bash
 cd chatmate
@@ -93,7 +50,7 @@ Pastikan ada device/emulator Android yang aktif (`flutter devices`).
 
 ---
 
-## 5. Cara Menggunakan (sesuai contoh yang diminta)
+## 6. Cara Menggunakan (sesuai contoh yang diminta)
 
 1. Buka aplikasi → tekan **"Belum punya akun? Daftar di sini"**.
 2. Daftar akun pertama:
@@ -116,7 +73,7 @@ pesan akan muncul real-time di kedua sisi.
 
 ---
 
-## 6. Struktur Data di Firestore
+## 7. Struktur Data di Firestore
 
 ```
 users/{uid}
@@ -144,7 +101,7 @@ chat_media/{chatId}/files/{id}_namafile.pdf
 
 ---
 
-## 7. Catatan Teknis
+## 8. Catatan Teknis
 
 - Semua fitur (login, chat, kirim gambar/berkas, ganti foto profil) **terhubung
   ke Firebase sungguhan** — bukan simulasi/mock lokal — sehingga pesan benar-benar
