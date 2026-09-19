@@ -12,7 +12,7 @@ Aplikasi chat mirip WhatsApp dibuat dengan **Flutter (Dart)** dan **Firebase**
 chatmate/
 ├── lib/
 │   ├── main.dart                     # entry point + AuthGate (cek login/logout)
-│   ├── firebase_options.dart         # ⚠️ PLACEHOLDER — wajib di-generate ulang
+│   ├── firebase_options.dart         # PLACEHOLDER — wajib di-generate ulang
 │   ├── theme.dart                    # warna & tema mirip WhatsApp
 │   ├── models/                       # User, Message, Chat model
 │   ├── services/                     # AuthService, ChatService, StorageService
